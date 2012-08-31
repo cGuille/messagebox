@@ -40,17 +40,17 @@
             matrix = toMatrix(fields, dataSet.slice(- this.options.maxItems), this.options.displayFields),
             rows   = this.container.selectAll('.message-box-row').data(matrix);
 
-            rows.selectAll('.message-box-field').data(identity).text(String);
+        rows.selectAll('.message-box-field').data(identity).text(String);
 
-            rows.enter().insert(this.options.rowElement)
-                .classed('message-box-row', true)
-                .selectAll('.message-box-field').data(identity).enter().append(this.options.fieldElement)
-                    .attr('class', function (d, i) {
-                        return 'message-box-field message-box-field-' + fields.names[i];
-                    })
-                    .text(String);
+        rows.enter().insert(this.options.rowElement)
+            .classed('message-box-row', true)
+            .selectAll('.message-box-field').data(identity).enter().append(this.options.fieldElement)
+                .attr('class', function (d, i) {
+                    return 'message-box-field message-box-field-' + fields.names[i];
+                })
+                .text(String);
 
-            rows.exit().remove();
+        rows.exit().remove();
     };
 
     function identity(i) {
