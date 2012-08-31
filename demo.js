@@ -9,13 +9,13 @@
                 names : ['date', 'pseudo', 'message'],
                 labels: ['Date', 'Pseudo', 'Message'],
             },
-            box = new MessageBox(d3.select('#content').append('table').node(), boxFields, { maxItems: 10 }),
-            btnMaxItems = document.getElementById('maxItems'),
+            box = new MessageBox(d3.select('#content').append('table').node(), boxFields, { maxRows: 10 }),
+            btnMaxRows = document.getElementById('maxRows'),
             btnDisplayFields = document.getElementById('displayFields');
 
-        btnMaxItems.value = box.options.maxItems;
-        btnMaxItems.onchange = function () {
-            box.options.maxItems = +this.value;
+        btnMaxRows.value = box.options.maxRows;
+        btnMaxRows.onchange = function () {
+            box.options.maxRows = +this.value;
         };
 
         btnDisplayFields.value = box.options.displayFields;
