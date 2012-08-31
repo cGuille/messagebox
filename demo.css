@@ -1,0 +1,19 @@
+html {
+    color: #222;
+    font-style: "Trebuchet MS", "Helvetica", "sans-serif";
+}
+
+#content {
+    width: 80%;
+    margin: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%
+}
+td {
+    text-align: center;
+    border: 1px solid #777;
+    padding: 2px 4px;
+}
