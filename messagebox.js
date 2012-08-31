@@ -1,4 +1,4 @@
-(function () {
+(function (d3) {
     'use strict';
 
     window.MessageBox = MessageBox;
@@ -94,4 +94,4 @@
         }
         return matrix;
     }
-}());
+}(window.d3));
